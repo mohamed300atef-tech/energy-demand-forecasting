@@ -1,0 +1,29 @@
+{
+  "data": {
+    "series": "Germany daily electricity consumption (GWh)",
+    "from": "2006-01-01",
+    "to": "2017-12-31",
+    "test_period": "2017-01-01 to 2017-12-31",
+    "test_days": 365,
+    "horizon_days": 7
+  },
+  "metrics": {
+    "Seasonal naive": {
+      "MAE_GWh": 54.1,
+      "MAPE_%": 4.04,
+      "MAPE_%_holidays_and_xmas": 19.26
+    },
+    "Holt-Winters": {
+      "MAE_GWh": 40.1,
+      "MAPE_%": 3.05,
+      "MAPE_%_holidays_and_xmas": 15.45
+    },
+    "LightGBM": {
+      "MAE_GWh": 25.75,
+      "MAPE_%": 1.86,
+      "MAPE_%_holidays_and_xmas": 2.45
+    }
+  },
+  "best_model": "LightGBM",
+  "mae_improvement_vs_seasonal_naive": 0.524
+}
